@@ -1,0 +1,1454 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bihar Mausam | Weather Tools, TAF Verification & Meteorological Services</title>
+
+    <!-- Primary SEO -->
+    <meta name="description" content="Bihar Mausam is a multi-service weather portal providing TAF verification, weather monitoring, meteorological tools, rainfall forecast verification, hydromet services, radar monitoring and weather data services for Bihar and India."
+    />
+
+    <meta name="keywords" content="Bihar Mausam, Biharmausam, Bihar Weather, Bihar Mausam Today, Patna Weather, Bihar Weather Today, TAF Verification, METAR Verification, Rainfall Forecast Verification, Meteorological Tools, Weather Data Bihar, बिहार मौसम, पटना मौसम"
+    />
+
+    <meta name="author" content="Bihar Mausam" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://biharmausam.com/" />
+
+    <!-- Language / Region -->
+    <meta http-equiv="content-language" content="en-IN" />
+    <meta name="geo.region" content="IN-BR" />
+    <meta name="geo.placename" content="Bihar, India" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bihar Mausam" />
+    <meta property="og:title" content="Bihar Mausam | Weather & Meteorological Services" />
+    <meta property="og:description" content="Integrated weather tools, TAF verification, rainfall verification, hydromet services, radar monitoring and meteorological resources." />
+    <meta property="og:url" content="https://biharmausam.com/" />
+    <meta property="og:image" content="https://biharmausam.com/apple180.png" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- X / Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bihar Mausam | Weather & Meteorological Tools" />
+    <meta name="twitter:description" content="Weather tools, TAF verification, rainfall forecast verification, radar monitoring and meteorological services." />
+    <meta name="twitter:image" content="https://biharmausam.com/apple180.png" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/apple.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple180.png" />
+
+    <!-- Website Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Bihar Mausam",
+            "alternateName": [
+                "Biharmausam",
+                "BiharMausam"
+            ],
+            "url": "https://biharmausam.com/",
+            "description": "Multi-service weather and meteorological tools portal providing TAF verification, rainfall forecast verification, radar monitoring, hydromet services and weather utilities.",
+            "inLanguage": [
+                "en-IN",
+                "hi-IN"
+            ]
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <style>
+        :root {
+            --primary-blue: #002d5b;
+            --secondary-blue: #0056b3;
+            --accent-gold: #ffc107;
+            --imd-orange: #ff8c00;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: linear-gradient(135deg, #e0eaff 0%, #c7d8f5 50%, #dde8fa 100%);
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .gov-header {
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            padding: 15px 40px;
+            border-bottom: 2px solid rgba(0, 45, 91, 0.25);
+            box-shadow: 0 4px 24px rgba(0, 45, 91, 0.08);
+            position: relative;
+            z-index: 100;
+        }
+
+        .logo-img {
+            height: 90px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.08) rotate(-2deg);
+        }
+
+        .header-titles {
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .header-titles h5 {
+            font-size: 13px;
+            margin-bottom: 2px;
+            font-weight: 600;
+        }
+
+        .header-titles h6 {
+            font-size: 12px;
+            margin-bottom: 3px;
+            font-weight: 400;
+        }
+
+        .header-titles h3 {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--primary-blue);
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 0;
+            white-space: nowrap;
+        }
+
+        .gov-header .container-fluid {
+            position: relative;
+        }
+
+        .gov-header .header-titles {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .main-nav {
+            background: rgba(0, 45, 91, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 99;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, rgba(0, 45, 91, 0.65) 0%, rgba(0, 86, 179, 0.55) 100%);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 30px 0 50px 0;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+            z-index: 10;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-bottom: 4px !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: var(--accent-gold);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #fff !important;
+        }
+
+        .service-card {
+            background: rgba(21, 42, 69, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+            height: 100%;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 183, 255, 0.2);
+            border: 1px solid rgba(0, 183, 255, 0.4) !important;
+        }
+
+        @property --angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        .service-card::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: 20px;
+            padding: 3px;
+            background: conic-gradient(from var(--angle), transparent 0%, transparent 60%, rgb(0, 183, 255) 80%, rgb(255, 48, 255) 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: rotBGimg 3s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        @keyframes rotBGimg {
+            from {
+                --angle: 0deg;
+            }
+            to {
+                --angle: 360deg;
+            }
+        }
+
+        .service-card h5 {
+            color: white;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .service-card .text-muted {
+            color: #d1d5db !important;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon-box {
+            height: 80px;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: white;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .service-card:hover .card-icon-box,
+        .hover-active .card-icon-box {
+            transform: translateY(-8px) scale(1.15);
+        }
+
+        object {
+            outline: none;
+        }
+
+        .btn-portal {
+            border-radius: 50px;
+            padding: 10px 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .service-card .accordion-item {
+            background-color: transparent;
+        }
+
+        /* Accordion Styles for Cards */
+
+        .card-accordion-btn {
+            width: 100%;
+            border-radius: 50px !important;
+            padding: 10px 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 13px;
+            background-color: #152a45;
+            color: #fff;
+            border: 1px solid #2a4060;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-accordion-btn:not(.collapsed) {
+            background-color: #1e3a5f;
+            color: #fff;
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .accordion-link {
+            text-decoration: none;
+            color: #ccc;
+            font-size: 13px;
+            display: block;
+            padding: 8px 5px;
+            border-bottom: 1px solid #2a4060;
+            transition: 0.2s;
+        }
+
+        .accordion-link:hover {
+            color: #fff;
+            padding-left: 10px;
+        }
+
+        /* Hover Effect Logic */
+
+        .cards-effect-container>div:hover,
+        .cards-effect-container>div.hover-active {
+            z-index: 10;
+        }
+
+        .cards-effect-container>div:hover .service-card,
+        .cards-effect-container>div.hover-active .service-card {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Dark Mode Toggle Switch */
+
+        .theme-switch {
+            --toggle-size: 15px;
+            /* Adjusted size for header */
+            --container-width: 5.625em;
+            --container-height: 2.5em;
+            --container-radius: 6.25em;
+            --container-light-bg: #3d7eae;
+            --container-night-bg: #1d1f2c;
+            --circle-container-diameter: 3.375em;
+            --sun-moon-diameter: 2.125em;
+            --sun-bg: #ecca2f;
+            --moon-bg: #c4c9d1;
+            --spot-color: #959db1;
+            --circle-container-offset: calc( (var(--circle-container-diameter) - var(--container-height)) / 2 * -1);
+            --stars-color: #fff;
+            --clouds-color: #f3fdff;
+            --back-clouds-color: #aacadf;
+            --transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
+            --circle-transition: 0.3s cubic-bezier(0, -0.02, 0.35, 1.17);
+            margin-left: 15px;
+        }
+
+        .theme-switch,
+        .theme-switch *,
+        .theme-switch *::before,
+        .theme-switch *::after {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-size: var(--toggle-size);
+        }
+
+        .theme-switch__container {
+            width: var(--container-width);
+            height: var(--container-height);
+            background-color: var(--container-light-bg);
+            border-radius: var(--container-radius);
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0em -0.062em 0.062em rgba(0, 0, 0, 0.25), 0em 0.062em 0.125em rgba(255, 255, 255, 0.94);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .theme-switch__container::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            inset: 0;
+            box-shadow: 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset, 0em 0.05em 0.187em rgba(0, 0, 0, 0.25) inset;
+            border-radius: var(--container-radius);
+        }
+
+        .theme-switch__checkbox {
+            display: none;
+        }
+
+        .theme-switch__circle-container {
+            width: var(--circle-container-diameter);
+            height: var(--circle-container-diameter);
+            background-color: rgba(255, 255, 255, 0.1);
+            position: absolute;
+            left: var(--circle-container-offset);
+            top: var(--circle-container-offset);
+            border-radius: var(--container-radius);
+            box-shadow: inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), inset 0 0 0 3.375em rgba(255, 255, 255, 0.1), 0 0 0 0.625em rgba(255, 255, 255, 0.1), 0 0 0 1.25em rgba(255, 255, 255, 0.1);
+            display: flex;
+            transition: var(--circle-transition);
+            pointer-events: none;
+        }
+
+        .theme-switch__sun-moon-container {
+            pointer-events: auto;
+            position: relative;
+            z-index: 2;
+            width: var(--sun-moon-diameter);
+            height: var(--sun-moon-diameter);
+            margin: auto;
+            border-radius: var(--container-radius);
+            background-color: var(--sun-bg);
+            box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #a1872a inset;
+            filter: drop-shadow(0.062em 0.125em 0.125em rgba(0, 0, 0, 0.25)) drop-shadow(0em 0.062em 0.125em rgba(0, 0, 0, 0.25));
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .theme-switch__moon {
+            transform: translateX(100%);
+            width: 100%;
+            height: 100%;
+            background-color: var(--moon-bg);
+            border-radius: inherit;
+            box-shadow: 0.062em 0.062em 0.062em 0em rgba(254, 255, 239, 0.61) inset, 0em -0.062em 0.062em 0em #969696 inset;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .theme-switch__spot {
+            position: absolute;
+            top: 0.75em;
+            left: 0.312em;
+            width: 0.75em;
+            height: 0.75em;
+            border-radius: var(--container-radius);
+            background-color: var(--spot-color);
+            box-shadow: 0em 0.0312em 0.062em rgba(0, 0, 0, 0.25) inset;
+        }
+
+        .theme-switch__spot:nth-of-type(2) {
+            width: 0.375em;
+            height: 0.375em;
+            top: 0.937em;
+            left: 1.375em;
+        }
+
+        .theme-switch__spot:nth-last-of-type(3) {
+            width: 0.25em;
+            height: 0.25em;
+            top: 0.312em;
+            left: 0.812em;
+        }
+
+        .theme-switch__clouds {
+            width: 1.25em;
+            height: 1.25em;
+            background-color: var(--clouds-color);
+            border-radius: var(--container-radius);
+            position: absolute;
+            bottom: -0.625em;
+            left: 0.312em;
+            box-shadow: 0.937em 0.312em var(--clouds-color), -0.312em -0.312em var(--back-clouds-color), 1.437em 0.375em var(--clouds-color), 0.5em -0.125em var(--back-clouds-color), 2.187em 0 var(--clouds-color), 1.25em -0.062em var(--back-clouds-color), 2.937em 0.312em var(--clouds-color), 2em -0.312em var(--back-clouds-color), 3.625em -0.062em var(--clouds-color), 2.625em 0em var(--back-clouds-color), 4.5em -0.312em var(--clouds-color), 3.375em -0.437em var(--back-clouds-color), 4.625em -1.75em 0 0.437em var(--clouds-color), 4em -0.625em var(--back-clouds-color), 4.125em -2.125em 0 0.437em var(--back-clouds-color);
+            transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
+        }
+
+        .theme-switch__stars-container {
+            position: absolute;
+            color: var(--stars-color);
+            top: -100%;
+            left: 0.312em;
+            width: 2.75em;
+            height: auto;
+            transition: var(--transition);
+        }
+
+        .theme-switch__checkbox:checked+.theme-switch__container {
+            background-color: var(--container-night-bg);
+        }
+
+        .theme-switch__checkbox:checked+.theme-switch__container .theme-switch__circle-container {
+            left: calc( 100% - var(--circle-container-offset) - var(--circle-container-diameter));
+        }
+
+        .theme-switch__checkbox:checked+.theme-switch__container .theme-switch__circle-container:hover {
+            left: calc( 100% - var(--circle-container-offset) - var(--circle-container-diameter) - 0.187em);
+        }
+
+        .theme-switch__circle-container:hover {
+            left: calc(var(--circle-container-offset) + 0.187em);
+        }
+
+        .theme-switch__checkbox:checked+.theme-switch__container .theme-switch__moon {
+            transform: translate(0);
+        }
+
+        .theme-switch__checkbox:checked+.theme-switch__container .theme-switch__clouds {
+            bottom: -4.062em;
+        }
+
+        .theme-switch__checkbox:checked+.theme-switch__container .theme-switch__stars-container {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Dark Mode Theme Styles */
+
+        body.dark-mode {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .gov-header {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        body.dark-mode .main-nav {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        body.dark-mode .hero-section {
+            background: rgba(30, 41, 59, 0.3);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        body.dark-mode .header-titles h5,
+        body.dark-mode .header-titles h6 {
+            color: #b0b0b0;
+        }
+
+        body.dark-mode .header-titles h3 {
+            color: #64b5f6;
+        }
+
+        /* Theme toggle + 150yr logo container - fixed top right */
+
+        .theme-switch-fixed {
+            position: fixed;
+            top: 10px;
+            right: 15px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            /* space between toggle and logo */
+        }
+
+        .logo-150yr {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.4s ease, opacity 0.3s ease;
+            opacity: 0.9;
+        }
+
+        body.dark-mode .service-card {
+            background: rgba(15, 25, 40, 0.8);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        body.dark-mode .text-muted {
+            color: #ccc !important;
+        }
+
+        body.dark-mode .card-accordion-btn {
+            background-color: #152a45;
+            border-color: #2a4060;
+        }
+
+        body.dark-mode .card-accordion-btn:not(.collapsed) {
+            background-color: #1e3a5f;
+        }
+
+        body.dark-mode .accordion-link {
+            color: #ccc;
+            border-bottom-color: #2a4060;
+        }
+
+        body.dark-mode .accordion-link:hover {
+            color: #fff;
+        }
+
+        body.dark-mode .imd-footer {
+            background-color: #0d1b2a;
+            border-top-color: #bfa15f;
+        }
+
+        /* Advanced Aurora Glassmorphism Backgrounds */
+
+        .glass-bg-orbs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        body:not(.dark-mode) .glass-bg-orbs {
+            opacity: 0.45;
+        }
+
+        body.dark-mode .glass-bg-orbs {
+            opacity: 0.4;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.3;
+            animation: floatOrbs 10s ease-in-out infinite alternate;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: #a855f7;
+            top: -10%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: #3b82f6;
+            bottom: -20%;
+            right: -10%;
+            animation-delay: -2s;
+        }
+
+        .orb-3 {
+            width: 300px;
+            height: 300px;
+            background: #ec4899;
+            top: 40%;
+            right: 10%;
+            animation-delay: -4s;
+        }
+
+        .orb-4 {
+            width: 450px;
+            height: 450px;
+            background: #06b6d4;
+            bottom: 10%;
+            left: 20%;
+            animation-delay: -6s;
+        }
+
+        @keyframes floatOrbs {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+        }
+
+        body:not(.dark-mode) .glass-particles {
+            opacity: 0.15;
+        }
+
+        .glass-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.3;
+            animation: moveParticles 20s linear infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @keyframes moveParticles {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 48px 48px;
+            }
+        }
+    </style>
+</head>
+
+<body class="position-relative">
+    <!-- Fixed top-right: Theme Toggle + 150yr Logo -->
+    <div class="theme-switch-fixed">
+        <label class="theme-switch">
+        <input
+          type="checkbox"
+          class="theme-switch__checkbox"
+          id="themeToggle"
+        />
+        <div class="theme-switch__container">
+          <div class="theme-switch__clouds"></div>
+          <div class="theme-switch__stars-container">
+            <i class="fas fa-star" style="position:absolute;top:10px;left:10px;font-size:8px;"></i>
+            <i class="fas fa-star" style="position:absolute;top:20px;left:25px;font-size:6px;"></i>
+            <i class="fas fa-star" style="position:absolute;top:5px;left:30px;font-size:5px;"></i>
+          </div>
+          <div class="theme-switch__circle-container">
+            <div class="theme-switch__sun-moon-container">
+              <div class="theme-switch__moon">
+                <div class="theme-switch__spot"></div>
+                <div class="theme-switch__spot"></div>
+                <div class="theme-switch__spot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </label>
+        <img src="IMD_150_Year_Logo.png" alt="150 Year Logo" class="logo-150yr" />
+    </div>
+    <!-- Main Background Effects (Aurora Orbs + Particles) -->
+    <div class="glass-bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+    <div class="glass-particles"></div>
+    <header class="gov-header">
+        <div class="container-fluid d-flex align-items-center">
+            <div class="flex-shrink-0 d-none d-md-block">
+                <img src="imd_logo.png" alt="IMD Logo" class="logo-img" />
+            </div>
+            <div class="header-titles text-center px-3 flex-grow-1">
+                <h5>भारत सरकार | Government of India</h5>
+                <h6>India Meteorological Department</h6>
+                <h3>Meteorological Centre, Patna</h3>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg main-nav sticky-top navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://instrument.biharmausam.com/"
+                >Instrument</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://swfc.biharmausam.com/">SWFC</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://aws.biharmausam.com/">Weather Live</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://requisition.biharmausam.com/"
+                >requisition</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contactus">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="fw-bold mb-1" style="font-size:1.6rem; line-height:1.3;">
+                Bihar Mausam &ndash; Weather &amp; Meteorological Services Portal
+            </h1>
+            <p class="mt-2 mb-0 opacity-75" style="font-size:0.92rem;">
+                Integrated Digital Weather Services, TAF Verification, Forecast Tools and Meteorological Resources for Bihar and India
+            </p>
+        </div>
+    </section>
+
+    <div class="container mb-5">
+        <div class="row g-4 justify-content-center cards-effect-container">
+            <div class="col-md-6 col-lg-3">
+                <div class="card service-card p-4 text-center" style="border-bottom-color: #002d5b">
+                    <div class="d-flex justify-content-center">
+                        <div class="card-icon-box" style="background-color: transparent">
+                            <object data="biharmausam.com_icons/01_instrument_management.svg" type="image/svg+xml" style="width: 100%; height: 100%;"></object>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold">Instrument Management</h5>
+                    <p class="text-muted small">
+                        Manage and track all meteorological instruments and assets.
+                    </p>
+                    <a href="https://instrument.biharmausam.com/" class="btn btn-outline-primary btn-portal mt-auto">Access Portal <i class="fas fa-arrow-right ms-2"></i
+            ></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card service-card p-4 text-center" style="border-bottom-color: #ff8c00">
+                    <div class="d-flex justify-content-center">
+                        <div class="card-icon-box" style="background-color: transparent">
+                            <object data="biharmausam.com_icons/02_swfc.svg" type="image/svg+xml" style="width: 100%; height: 100%;"></object>
+                        </div>
+                    </div>
+                    <h5 class="fw-bold">SWFC</h5>
+                    <p class="text-muted small mb-3">
+                        State Weather Forecasting Centre
+                    </p>
+                    <div class="accordion accordion-flush w-100 mt-auto" id="accSWFC">
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed card-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#flush-swfc">
+                    Select Action
+                  </button>
+                            </h2>
+                            <div id="flush-swfc" class="accordion-collapse collapse" data-bs-parent="#accSWFC">
+                                <div class="mt-2 text-start">
+                                    <a href="https://swfc.biharmausam.com/" class="accordion-link"><i class="fas fa-database me-2 text-primary"></i>Data
+                      Management</a
+                    >
+                    <a
+                      href="https://biharmausam.com/swfc/generate_bulletin/"
+                      class="accordion-link"
+                      ><i class="fas fa-file-alt me-2 text-success"></i>Generate
+                      Bulletin</a
+                    >
+                    <div style="border-bottom: 1px solid #2a4060">
+                      <div class="d-flex align-items-center">
+                        <a
+                          href="https://biharmausam.com/swfc/Weather_Report/"
+                          class="accordion-link border-0 flex-grow-1"
+                          ><i class="fas fa-cloud-sun me-2 text-info"></i
+                          >Weather Report</a
+                        >
+                        <i
+                          class="fas fa-chevron-down px-3 text-muted"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#weatherSubMenu"
+                          style="cursor: pointer; font-size: 12px"
+                        ></i>
+                      </div>
+                      <div class="collapse" id="weatherSubMenu">
+                        <a
+                          href="https://biharmausam.com/swfc/Weather_Report/Weekly"
+                          class="accordion-link border-0"
+                          ><span class="ms-3"
+                            ><i
+                              class="fas fa-angle-right me-2 text-secondary"
+                            ></i
+                            >Weekly</span
+                          ></a
+                        >
+                        <a
+                          href="https://biharmausam.com/swfc/Weather_Report/Monthly"
+                          class="accordion-link border-0"
+                          ><span class="ms-3"
+                            ><i
+                              class="fas fa-angle-right me-2 text-secondary"
+                            ></i
+                            >Monthly</span
+                          ></a
+                        >
+                        <a
+                          href="https://biharmausam.com/swfc/Weather_Report/Extended"
+                          class="accordion-link border-0"
+                          ><span class="ms-3"
+                            ><i
+                              class="fas fa-angle-right me-2 text-secondary"
+                            ></i
+                            >Extended</span
+                          ></a
+                        >
+                      </div>
+                    </div>
+                    <a
+                      href="https://biharmausam.com/swfc/Rainfall_Forecast_Verification"
+                      class="accordion-link"
+                      ><i class="fas fa-chart-bar me-2 text-primary"></i
+                      >Rainfall Forecast Verification</a
+                    >
+                    <a
+                      href="https://biharmausam.com/swfc/Nowcast_Warning_SWFC/"
+                      class="accordion-link"
+                      ><img
+                        src="biharmausam.com_icons/atmospheric_conditions.png"
+                        alt="Nowcast"
+                        class="me-2"
+                        style="width: 18px; height: 18px; vertical-align: -3px; object-fit: contain;"
+                      />Nowcast</a
+                    >
+                    <a
+                      href="https://biharmausam.com/swfc/Lightning"
+                      class="accordion-link"
+                      ><i class="fas fa-bolt me-2 text-warning"></i>Lightning</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hydromet Section (Accordion) -->
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card service-card p-4 text-center"
+            style="border-bottom-color: #0056b3"
+          >
+            <div class="d-flex justify-content-center">
+              <div class="card-icon-box" style="background-color: transparent">
+                <object data="biharmausam.com_icons/03_hydromet.svg" type="image/svg+xml" style="width: 100%; height: 100%;"></object>
+              </div>
+            </div>
+            <h5 class="fw-bold">Hydromet Section</h5>
+            <p class="text-muted small mb-3">FMO, DRMS & Agromet Services</p>
+
+            <div
+              class="accordion accordion-flush w-100 mt-auto"
+              id="accHydromet"
+            >
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed card-accordion-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-hydromet"
+                  >
+                    Select Service
+                  </button>
+                </h2>
+                <div
+                  id="flush-hydromet"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accHydromet"
+                >
+                  <div class="mt-2 text-start">
+                    <div style="border-bottom: 1px solid #2a4060">
+                      <div class="d-flex align-items-center">
+                        <a href="#" class="accordion-link border-0 flex-grow-1"
+                          ><i class="fas fa-water me-2 text-primary"></i>FMO
+                          Division</a
+                        >
+                        <i
+                          class="fas fa-chevron-down px-3 text-muted"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#fmoSubMenu"
+                          style="cursor: pointer; font-size: 12px"
+                        ></i>
+                      </div>
+                      <div class="collapse" id="fmoSubMenu">
+                        <a
+                          href="https://biharmausam.com/hydromet/bulletin"
+                          class="accordion-link border-0"
+                          ><span class="ms-3"
+                            ><i
+                              class="fas fa-angle-right me-2 text-secondary"
+                            ></i
+                            >Hydromet Bulletin</span
+                          ></a
+                        >
+                        <a
+                          href="https://biharmausam.com/hydromet/QPF_Forecast_Verification/"
+                          class="accordion-link border-0"
+                          ><span class="ms-3"
+                            ><i
+                              class="fas fa-angle-right me-2 text-secondary"
+                            ></i
+                            >QPF Forecast Verification</span
+                          ></a
+                        >
+                        <a
+                          href="https://biharmausam.com/hydromet/isohyetal/"
+                          class="accordion-link border-0"
+                          ><span class="ms-3"
+                            ><i
+                              class="fas fa-angle-right me-2 text-secondary"
+                            ></i
+                            >ISOHYETAL</span
+                          ></a
+                        >
+                        <a
+                          href="https://biharmausam.com/hydromet/AAP/"
+                          class="accordion-link border-0"
+                          ><span class="ms-3"
+                            ><i
+                              class="fas fa-angle-right me-2 text-secondary"
+                            ></i
+                            >AAP</span
+                          ></a
+                        >
+                      </div>
+                    </div>
+                    <div style="border-bottom: 1px solid #2a4060">
+                      <div class="d-flex align-items-center">
+                        <a
+                          href="https://biharmausam.com/hydromet/drms/Bihar_Monsoon_Report/"
+                          class="accordion-link border-0 flex-grow-1"
+                          ><i class="fas fa-database me-2 text-success"></i>DRMS
+                          Portal</a
+                        >
+                        <i
+                          class="fas fa-chevron-down px-3 text-muted"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#drmsSubMenu"
+                          style="cursor: pointer; font-size: 12px"
+                        ></i>
+                      </div>
+                      <div class="collapse" id="drmsSubMenu">
+                        <a
+                          href="https://biharmausam.com/hydromet/drms/Bihar_Monsoon_Report/"
+                          class="accordion-link border-0"
+                          ><span class="ms-3"
+                            ><i
+                              class="fas fa-angle-right me-2 text-secondary"
+                            ></i
+                            >Bihar Monsoon Report</span
+                          ></a
+                        >
+                      </div>
+                    </div>
+                    <div>
+                      <div class="d-flex align-items-center">
+                        <a
+                          href="#agrometSubMenu"
+                          class="accordion-link border-0 flex-grow-1"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#agrometSubMenu"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="agrometSubMenu"
+                          ><i class="fas fa-seedling me-2 text-success"></i>Agromet
+                          Section</a
+                        >
+                        <i
+                          class="fas fa-chevron-down px-3 text-muted"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#agrometSubMenu"
+                          style="cursor: pointer; font-size: 12px"
+                        ></i>
+                      </div>
+                      <div class="collapse" id="agrometSubMenu">
+                        <a
+                          href="https://biharmausam.com/hydromet/Agromet_Value_Addition/"
+                          class="accordion-link border-0"
+                          ><span class="ms-3"
+                            ><i
+                              class="fas fa-angle-right me-2 text-secondary"
+                            ></i
+                            >Agromet Value Addition</span
+                          ></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RSRS Section (Accordion) -->
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card service-card p-4 text-center"
+            style="border-bottom-color: #fd7e14"
+          >
+            <div class="d-flex justify-content-center">
+              <div class="card-icon-box" style="background-color: transparent">
+                <object data="biharmausam.com_icons/04_rsrw.svg" type="image/svg+xml" style="width: 100%; height: 100%;"></object>
+              </div>
+            </div>
+            <h5 class="fw-bold">RSRW</h5>
+            <p class="text-muted small mb-3">
+              RSRW Section & Surface Weather Observation
+            </p>
+
+            <div class="accordion accordion-flush w-100 mt-auto" id="accRSRS">
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed card-accordion-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-rsrs"
+                  >
+                    Open Tools
+                  </button>
+                </h2>
+                <div
+                  id="flush-rsrs"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accRSRS"
+                >
+                  <div class="mt-2 text-start">
+                    <div>
+                      <div class="d-flex align-items-center justify-content-between">
+                        <a
+                          href="https://biharmausam.com/rsrw/SynopX/index.html"
+                          class="accordion-link border-0 flex-grow-1 text-decoration-none d-flex align-items-center"
+                          title="SynopX : Surface Meteorology Suite — SYNOP Processing • Observation Analysis • Meteorological Tools"
+                          style="min-width: 0;"
+                        >
+                          <span class="me-2 flex-shrink-0" style="font-size: 14px;">🧩</span>
+                          <span class="text-nowrap text-truncate" style="font-size: 11.5px;">
+                            <strong class="text-white">SynopX :</strong>
+                            <span class="text-info fw-semibold">Surface Meteorology Suite</span>
+                          </span>
+                        </a>
+                                    <i class="fas fa-chevron-down ps-2 pe-1 py-2 text-muted flex-shrink-0" data-bs-toggle="collapse" data-bs-target="#synopxSubMenu" style="cursor: pointer; font-size: 12px" title="Toggle SynopX Modules"></i>
+                                </div>
+                                <div class="collapse" id="synopxSubMenu">
+                                    <div class="py-1" style="border-left: 2px solid #fd7e14; margin-left: 12px; padding-left: 4px;">
+                                        <a href="https://biharmausam.com/rsrw/SynopX/index.html" class="accordion-link border-0 py-1"><span class="ms-2 me-2">🔓</span>SYNOP Decoder</a
+                          >
+                          <a
+                            href="https://biharmausam.com/rsrw/SynopX/Synop_Create.html"
+                            class="accordion-link border-0 py-1"
+                            ><span class="ms-2 me-2">✍️</span>SYNOP Creator & Validator</a
+                          >
+                          <a
+                            href="https://biharmausam.com/rsrw/SynopX/Synop_connvert.html"
+                            class="accordion-link border-0 py-1"
+                            ><span class="ms-2 me-2">🔄</span>SYNOP Converter</a
+                          >
+                          <a
+                            href="https://biharmausam.com/rsrw/SynopX/tools.html"
+                            class="accordion-link border-0 py-1"
+                            ><span class="ms-2 me-2">🧮</span>Meteorological Calculators</a
+                          >
+                          <a
+                            href="https://biharmausam.com/rsrw/SynopX/live_synop.html"
+                            class="accordion-link border-0 py-1"
+                            ><span class="ms-2 me-2">📡</span>Live SYNOP Monitor</a
+                          >
+                          <a
+                            href="https://biharmausam.com/rsrw/SynopX/dashboard.html"
+                            class="accordion-link border-0 py-1"
+                            ><span class="ms-2 me-2">📊</span>SYNOP Analytics</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aviation Services (Accordion) -->
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card service-card p-4 text-center"
+            style="border-bottom-color: #6610f2"
+          >
+            <div class="d-flex justify-content-center">
+              <div class="card-icon-box" style="background-color: transparent">
+                <object data="biharmausam.com_icons/05_aviation.svg" type="image/svg+xml" style="width: 100%; height: 100%;"></object>
+              </div>
+            </div>
+            <h5 class="fw-bold">Aviation Services</h5>
+            <p class="text-muted small mb-3">Flight Planning & Reports</p>
+            <div
+              class="accordion accordion-flush w-100 mt-auto"
+              id="accAviation"
+            >
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed card-accordion-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-aviation"
+                  >
+                    Aviation Tools
+                  </button>
+                </h2>
+                <div
+                  id="flush-aviation"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accAviation"
+                >
+                  <div class="mt-2 text-start">
+                    <a href="https://biharmausam.com/taf" class="accordion-link"
+                      ><i class="fas fa-tower-broadcast me-2 text-info"></i>TAF
+                      VARIFICATION (REAL TIME)</a
+                    >
+                    <a
+                      href="https://biharmausam.com/taf/takeoff"
+                      class="accordion-link"
+                      ><i class="fas fa-check-double me-2 text-success"></i
+                      >Take-off Data Verification</a
+                    >
+                    <a
+                      href="https://biharmausam.com/Aviation/Wind_Rose_Analyzer/"
+                      class="accordion-link"
+                      ><i class="fas fa-wind me-2 text-warning"></i> Wind Rose Analyzer</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nowcasting & Radar (Accordion) -->
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card service-card p-4 text-center"
+            style="border-bottom-color: #20c997"
+          >
+            <div class="d-flex justify-content-center">
+              <div class="card-icon-box" style="background-color: transparent">
+                <object data="biharmausam.com_icons/06_nowcast_radar.svg" type="image/svg+xml" style="width: 100%; height: 100%;"></object>
+              </div>
+            </div>
+            <h5 class="fw-bold">Nowcast & Radar</h5>
+            <p class="text-muted small mb-3">Real-time Monitoring</p>
+            <div class="accordion accordion-flush w-100 mt-auto" id="accRadar">
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed card-accordion-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-radar"
+                  >
+                    View Radar
+                  </button>
+                </h2>
+                <div
+                  id="flush-radar"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accRadar"
+                >
+                  <div class="mt-2 text-start">
+                    <a
+                      href="https://biharmausam.com/dwr/radar_viewer.php"
+                      class="accordion-link"
+                      ><i class="fas fa-circle-notch me-2 text-danger"></i>DWR
+                      Patna</a
+                    ><a href="#" class="accordion-link"
+                      ><i class="fas fa-bell me-2 text-warning"></i>Nowcast
+                      Alerts</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- R & D Section (Accordion) -->
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card service-card p-4 text-center"
+            style="border-bottom-color: #e83e8c"
+          >
+            <div class="d-flex justify-content-center">
+              <div class="card-icon-box" style="background-color: transparent">
+                <object data="biharmausam.com_icons/07_research_development.svg" type="image/svg+xml" style="width: 100%; height: 100%;"></object>
+              </div>
+            </div>
+            <h5 class="fw-bold">R & D</h5>
+            <p class="text-muted small mb-3">Research & Development</p>
+            <div class="accordion accordion-flush w-100 mt-auto" id="accRnD">
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed card-accordion-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-rnd"
+                  >
+                    Explore Tools
+                  </button>
+                </h2>
+                <div
+                  id="flush-rnd"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accRnD"
+                >
+                  <div class="mt-2 text-start">
+                    <a
+                      href="https://biharmausam.com/r&d/India_Level_Nowcast-Warning-SWFC/"
+                      class="accordion-link"
+                      ><i class="fas fa-earth-asia me-2 text-info"></i>India
+                      Weather Forecast System</a
+                    >
+                    <a
+                      href="https://biharmausam.com/r&d/AAP_and _ISOHYETAL"
+                      class="accordion-link"
+                      ><i class="fas fa-layer-group me-2 text-success"></i>All
+                      India AAP AND ISOHYETAL</a
+                    >
+                    <a
+                      href="https://synop.biharmausam.com/"
+                      class="accordion-link"
+                      ><i class="fas fa-chart-line me-2 text-primary"></i>SynopX,
+                      Meteorological Analysis Suite</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .imd-footer {
+        background-color: #002d5b;
+        color: #ffffff;
+        padding: 25px 0;
+        margin-top: 60px;
+        border-top: 3px solid #ffc107;
+      }
+      .dev-signature {
+        background: rgba(255, 255, 255, 0.06);
+        padding: 6px 18px;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 193, 7, 0.2);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .dev-label {
+        font-size: 11px;
+        text-transform: uppercase;
+        color: #ffc107;
+        font-weight: 600;
+      }
+      .dev-name {
+        font-size: 13px;
+        font-weight: 700;
+        color: #ffffff;
+      }
+    </style>
+    <footer class="imd-footer">
+      <div class="container">
+        <div class="footer-content text-center">
+          <div class="copyright-text">
+            &copy; 2024 Meteorological Centre Patna
+          </div>
+          <div class="imd-sub-text mb-3 small opacity-75">
+            India Meteorological Department, Ministry of Earth Sciences
+          </div>
+          <div class="dev-signature shadow-sm">
+            <span class="dev-label">Designed & Developed By</span>
+            <span class="dev-name"
+              ><i class="fas fa-code-branch me-1 text-warning"></i> IT, Research
+              & Development Section, MC Patna</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const toggle = document.getElementById("themeToggle");
+      const body = document.body;
+
+      // Default dark mode unless user explicitly chose light
+      if (localStorage.getItem("darkMode") === "disabled") {
+        // user chose light mode, keep light
+      } else {
+        body.classList.add("dark-mode");
+        toggle.checked = true;
+        localStorage.setItem("darkMode", "enabled");
+      }
+
+      toggle.addEventListener("change", () => {
+        if (toggle.checked) {
+          body.classList.add("dark-mode");
+          localStorage.setItem("darkMode", "enabled");
+        } else {
+          body.classList.remove("dark-mode");
+          localStorage.setItem("darkMode", "disabled");
+        }
+      });
+
+      // Forward hover state from SVG objects to parent columns
+      // This fixes the issue where hovering the icon makes the card lose its hover state
+      document.querySelectorAll('.card-icon-box object').forEach(obj => {
+        obj.addEventListener('load', () => {
+          try {
+            const svgDoc = obj.contentDocument;
+            if (!svgDoc) return;
+            const colDiv = obj.closest('.col-md-6');
+            if (!colDiv) return;
+            
+            svgDoc.addEventListener('pointerenter', () => {
+              colDiv.classList.add('hover-active');
+            });
+            svgDoc.addEventListener('pointerleave', () => {
+              colDiv.classList.remove('hover-active');
+            });
+          } catch(e) {
+            console.error("CORS prevents accessing SVG contentDocument locally.", e);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
